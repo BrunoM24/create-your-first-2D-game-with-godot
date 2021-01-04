@@ -17,7 +17,10 @@ func _physics_process(delta: float) -> void:
 	var direction := get_direction()
 	
 	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)
-	_velocity = move_and_slide(_velocity, Vector2.UP)
+	var snap := Vector2.DOWN * 50.0 if direction.y == 1.0 else Vector2.ZERO
+	_velocity = move_and_slide_with_snap(
+		_velocity, snap, Vector2.UP, true, 4, PI / 3
+		)
 
 
 func get_direction() -> Vector2:
