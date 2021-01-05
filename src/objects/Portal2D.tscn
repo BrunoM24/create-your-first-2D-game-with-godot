@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/portal.png" type="Texture" id=1]
+[ext_resource path="res://src/objects/Portal2D.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 71.0
@@ -62,6 +63,10 @@ tracks/1/keys = {
 }
 
 [node name="Portal2D" type="Area2D"]
+monitorable = false
+collision_layer = 0
+collision_mask = 2147483649
+script = ExtResource( 2 )
 
 [node name="portal" type="Sprite" parent="."]
 position = Vector2( 0, -116 )
