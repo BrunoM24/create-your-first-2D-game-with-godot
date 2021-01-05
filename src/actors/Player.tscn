@@ -46,8 +46,8 @@ position = Vector2( 0, -43 )
 shape = SubResource( 2 )
 
 [node name="StompDetector" type="Area2D" parent="."]
-visible = false
 modulate = Color( 0.337255, 1, 0, 1 )
+position = Vector2( 0, -9 )
 monitorable = false
 collision_layer = 0
 collision_mask = 16
