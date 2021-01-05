@@ -1,9 +1,13 @@
 tool
 extends Area2D
 
-onready var animationPlayer: AnimationPlayer = $AnimationPlayer
+onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 export var next_scene: PackedScene
+
+
+func _on_body_entered(body: Node) -> void:
+	teleport()
 
 
 func _get_configuration_warning() -> String:
@@ -11,4 +15,6 @@ func _get_configuration_warning() -> String:
 
 
 func teleport() -> void:
-	animationPlayer.play("fade_in")
+	animation_player.play("fade_in")
+	yield(animation_player, "animation_finished")
+	get_tree().change_scene_to(next_scene)
