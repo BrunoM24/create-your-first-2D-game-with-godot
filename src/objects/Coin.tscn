@@ -4,7 +4,8 @@
 [ext_resource path="res://src/objects/Coin.gd" type="Script" id=2]
 
 [sub_resource type="OccluderPolygon2D" id=1]
-polygon = PoolVector2Array( 0, -34.1278, 7, -34.1278, 14, -32.1278, 20, -28.1278, 27, -21.1278, 32, -12.1278, 34, -4.12782, 34, 6.87218, 30, 17.8722, 23, 25.8722, 16, 29.8722, 8, 33.8722, -8, 33.8722, -18, 29.8722, -24, 24.8722, -30, 16.8722, -34, 7.87218, -34, -8.12782, -30, -18.1278, -23, -26.1278, -13, -32.1278, -5, -34.1278 )
+closed = false
+polygon = PoolVector2Array( -5, -34.1278, 7, -34.1278, 14, -32.1278, 20, -28.1278, 27, -21.1278, 32, -12.1278, 34, -4.12782, 34, 6.87218, 30, 17.8722, 23, 25.8722, 16, 29.8722, 8, 33.8722, -8, 33.8722, -18, 29.8722, -24, 24.8722, -30, 16.8722, -34, 7.87218, -34, -8.12782, -30, -18.1278, -23, -26.1278, -13, -32.1278, -5, -34.1278 )
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 34.0
@@ -75,6 +76,7 @@ position = Vector2( 0, 0.127817 )
 texture = ExtResource( 1 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="coin"]
+show_behind_parent = true
 occluder = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
