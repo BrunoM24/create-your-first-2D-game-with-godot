@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/actors/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://assets/enemy.png" type="Texture" id=2]
+
+[sub_resource type="OccluderPolygon2D" id=3]
+polygon = PoolVector2Array( -8, -47, 8, -47, 18, -44, 27, -39, 36, -32, 44, -22, 50, -11, 54, 0, 55, 8, 55, 23, 52, 31, 48, 38, 40, 43, 29, 46, 22, 47, -24, 47, -32, 46, -41, 42, -47, 38, -51, 32, -55, 23, -55, 7, -53, -1, -48, -14, -40, -27, -31, -36, -20, -43 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 42, 35 )
@@ -18,16 +21,22 @@ script = ExtResource( 1 )
 position = Vector2( 0, -48 )
 texture = ExtResource( 2 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="enemy"]
+occluder = SubResource( 3 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0, -35 )
 shape = SubResource( 1 )
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+visible = false
 rect = Rect2( -50, -60, 100, 60 )
 process_parent = true
 physics_process_parent = true
 
 [node name="StompDetector" type="Area2D" parent="."]
+visible = false
 modulate = Color( 0, 0, 1, 1 )
 position = Vector2( 0, -70 )
 collision_layer = 16
