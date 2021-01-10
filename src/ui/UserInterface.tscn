@@ -28,6 +28,7 @@ text = "Score: %s"
 align = 2
 
 [node name="PauseOverlay" type="ColorRect" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0.235294 )
@@ -56,16 +57,16 @@ margin_bottom = 168.0
 
 [node name="ChangeSceneButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 5 )]
 margin_right = 386.0
-margin_bottom = 109.0
+margin_bottom = 106.0
 text = "Main Screen"
 next_scene_path = "res://src/screens/MainScreen.tscn"
 
 [node name="RetryButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 3 )]
-margin_top = 113.0
+margin_top = 114.0
 margin_right = 386.0
-margin_bottom = 222.0
+margin_bottom = 221.0
 
 [node name="QuitButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 2 )]
-margin_top = 226.0
+margin_top = 229.0
 margin_right = 386.0
 margin_bottom = 336.0
