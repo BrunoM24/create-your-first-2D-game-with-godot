@@ -28,7 +28,6 @@ text = "Score: %s"
 align = 2
 
 [node name="PauseOverlay" type="ColorRect" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0.235294 )
@@ -39,8 +38,10 @@ __meta__ = {
 [node name="Title" parent="PauseOverlay" instance=ExtResource( 4 )]
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -241.788
-margin_bottom = -210.788
+margin_left = -441.0
+margin_top = -242.0
+margin_right = 440.0
+margin_bottom = -211.0
 text = "Paused"
 
 [node name="PauseMenu" type="VBoxContainer" parent="PauseOverlay"]
