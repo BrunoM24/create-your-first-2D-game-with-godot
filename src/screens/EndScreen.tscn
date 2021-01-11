@@ -35,11 +35,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -139.5
-margin_top = -150.099
-margin_right = 139.5
-margin_bottom = -85.0986
-text = "Your final score is %s.
+margin_left = -251.0
+margin_top = -157.226
+margin_right = 251.0
+margin_bottom = -92.2258
+text = "You collected %s coins.
 You died %s times."
 align = 1
 __meta__ = {
@@ -61,11 +61,11 @@ __meta__ = {
 
 [node name="PlayButton" parent="Menu" instance=ExtResource( 6 )]
 margin_right = 399.0
-margin_bottom = 107.0
+margin_bottom = 105.0
 text = "Play Again"
 next_scene_path = "res://src/screens/MainScreen.tscn"
 
 [node name="QuitButton" parent="Menu" instance=ExtResource( 7 )]
-margin_top = 111.0
+margin_top = 113.0
 margin_right = 399.0
 margin_bottom = 219.0
