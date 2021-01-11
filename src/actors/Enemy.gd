@@ -4,7 +4,6 @@ extends "res://src/actors/Actor.gd"
 onready var collisionShape : CollisionShape2D = $CollisionShape2D
 onready var stompDetector : Area2D = $StompDetector
 
-export var score : int = 100
 
 func _ready() -> void:
 	_velocity.x = -speed.x
