@@ -55,16 +55,16 @@ margin_top = -168.0
 margin_right = 193.0
 margin_bottom = 168.0
 
-[node name="ChangeSceneButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 5 )]
+[node name="RetryButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 3 )]
 margin_right = 386.0
 margin_bottom = 106.0
-text = "Main Screen"
-next_scene_path = "res://src/screens/MainScreen.tscn"
 
-[node name="RetryButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 3 )]
+[node name="ChangeSceneButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 5 )]
 margin_top = 114.0
 margin_right = 386.0
 margin_bottom = 221.0
+text = "Main Screen"
+next_scene_path = "res://src/screens/MainScreen.tscn"
 
 [node name="QuitButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 2 )]
 margin_top = 229.0
