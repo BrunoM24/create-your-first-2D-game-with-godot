@@ -31,4 +31,3 @@ func _physics_process(delta: float) -> void:
 func die() -> void:
 	collisionShape.disabled = true
 	queue_free()
-	PlayerData.score += 100
