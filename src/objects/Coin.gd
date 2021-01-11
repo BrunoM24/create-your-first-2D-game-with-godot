@@ -4,9 +4,6 @@ extends Area2D
 onready var animationPlayer : AnimationPlayer = $AnimationPlayer
 
 
-export var score : int = 100
-
-
 func _on_body_entered(body: Node) -> void:
-	PlayerData.score += score
+	PlayerData.coins_collected = 1
 	animationPlayer.play("fade_out")
