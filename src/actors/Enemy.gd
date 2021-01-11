@@ -30,3 +30,10 @@ func _physics_process(delta: float) -> void:
 func die() -> void:
 	collisionShape.disabled = true
 	queue_free()
+
+
+func decide_direction(player_global_position: Vector2) -> void:
+	var direction: float = sign(player_global_position.x - global_position.x)
+	
+	if direction > 0:
+		_velocity.x *= -1.0
