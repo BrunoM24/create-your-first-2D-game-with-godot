@@ -9,4 +9,4 @@ func _ready() -> void:
 
 
 func _on_Coin_Collected() -> void:
-	label.text = str(PlayerData.coins_collected)
+	label.text = str(PlayerData.coins_collected).pad_zeros(3)
