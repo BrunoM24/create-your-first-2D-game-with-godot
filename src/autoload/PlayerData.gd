@@ -15,7 +15,7 @@ func reset() -> void:
 
 
 func set_coins_collected(value: int) -> void:
-	coins_collected += value
+	coins_collected = value
 	emit_signal("coin_collected")
 
 
